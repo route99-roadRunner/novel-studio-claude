@@ -1,0 +1,77 @@
+# 소설 창작 멀티 에이전트 시스템 설정 (Claude Code v2.0)
+
+# 프로젝트 설정
+project:
+  default_language: "ko"
+  output_dir: "projects"
+  templates_dir: "templates"
+
+# 에이전트 설정
+agents:
+  # 에이전트 프롬프트 파일 경로 (Claude Code Prompt Library 패턴)
+  prompt_dir: ".github/agents"
+
+  # 에이전트 역할 매핑
+  roles:
+    planning:
+      - main_writer
+      - story_writer
+      - character_writer
+      - setting_writer
+      - genre_specialist
+      - pacing_manager
+    writing:
+      - dialogue_writer
+      - action_writer
+      - emotion_writer
+      - prose_writer
+    quality:
+      - editorial_team
+      - feedback_agent
+      - research_agent
+
+  # 에이전트 실행 시간 제한 (초)
+  timeout:
+    planning: 300  # 5분
+    writing: 600   # 10분
+    review: 180    # 3분
+
+# 워크플로우 설정
+workflow:
+  # Phase 1: 기획 단계
+  phase1:
+    parallel_agents: ["story_writer", "character_writer", "setting_writer"]
+    review_cycles: 2  # 피드백 사이클 횟수
+
+  # Phase 2: 집필 단계
+  phase2:
+    chapters_per_batch: 1  # 한 번에 처리할 챕터 수
+    review_per_chapter: true
+
+  # Phase 3: 완성 단계
+  phase3:
+    final_review_cycles: 3
+
+# 출력 형식 설정
+output:
+  markdown:
+    encoding: "utf-8"
+    line_break: "\n"
+    include_metadata: true
+
+  json:
+    indent: 2
+    ensure_ascii: false
+    include_timestamps: true
+
+# 로깅 설정
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  save_to_file: true
+  log_dir: "logs"
+
+# 성능 설정
+performance:
+  max_retries: 3
+  retry_delay: 5.0
