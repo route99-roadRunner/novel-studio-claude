@@ -44,6 +44,7 @@ projects/
 !projects/ko/
 projects/ko/*
 !projects/ko/first_love_001/
+!projects/ko/ts_hunter_001/
 !projects/love_story_heroes/
 logs/
 *.log
