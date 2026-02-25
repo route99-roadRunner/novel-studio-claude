@@ -77,6 +77,8 @@ Based on their choice:
 
 <instructions>
 
+> Agent registry and Phase flow: see `.github/agents/orchestration.md`.
+
 ### Phase 1: Request Analysis and Planning
 
 **Input**:
@@ -142,23 +144,11 @@ Perform Setting Writer role: refer to .github/agents/setting-writer.agent.md
 Perform Genre Specialist role: refer to .github/agents/genre-specialist.agent.md
 </agent-delegation>
 
-For Korean:
-
 <agent-delegation>
-Perform Ko-Story Writer role: refer to .github/agents/ko-story-writer.agent.md
+Perform Opening Hook Specialist role: refer to .github/agents/opening-hook.agent.md
 </agent-delegation>
 
-<agent-delegation>
-Perform Ko-Character Writer role: refer to .github/agents/ko-character-writer.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Ko-Setting Writer role: refer to .github/agents/ko-setting-writer.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Ko-Genre Specialist role: refer to .github/agents/ko-genre-specialist.agent.md
-</agent-delegation>
+For Korean: Use `ko-` prefixed agents (e.g., `ko-story-writer.agent.md`). See `.github/agents/orchestration.md` for full registry.
 
 ### Phase 2: Chapter Writing Coordination
 
@@ -331,27 +321,7 @@ User selects English -> proceed with English agents.
 
 ### Example: Phase 1 Planning Delegation
 
-After analyzing user request and producing the Novel Creation Direction document, delegate to planning team:
-
-<agent-delegation>
-Perform Story Writer role: refer to .github/agents/story-writer.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Character Writer role: refer to .github/agents/character-writer.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Setting Writer role: refer to .github/agents/setting-writer.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Genre Specialist role: refer to .github/agents/genre-specialist.agent.md
-</agent-delegation>
-
-<agent-delegation>
-Perform Pacing Manager role: refer to .github/agents/pacing-manager.agent.md
-</agent-delegation>
+After analyzing user request and producing the Novel Creation Direction document, delegate to planning team agents listed in Phase 1 instructions above (Story/Character/Setting/Genre/Opening Hook/Pacing).
 
 ### Example: Phase 2 Scene Assignment
 
@@ -373,10 +343,7 @@ Chapter 3 Scene Breakdown:
 - **Document everything** - leave clear records of decisions
 - **Respect deadlines** - but quality comes first
 
-For agent registry, refer to `CLAUDE.md`.
+## References
 
----
-
-**Version**: 2.0-EN - Claude Code Optimized
-**Last Updated**: 2026-02-20
-**Language**: English (Default)
+- `.github/agents/orchestration.md`: Agent registry, Phase flow, spawn patterns
+- `.github/agents/examples/main-writer-example-ko.md`: Phase output format examples (Korean, applicable to EN)

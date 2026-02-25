@@ -156,6 +156,37 @@ Before producing output, verify:
 <web-novel-genres>
 ## Web Novel Genre Specialization
 
+### Web Novel Core Principles
+
+Web novels are content that delivers **moments of reward** through **familiar patterns** while keeping readers in **constant anticipation**. These 3 principles must be reflected in genre analysis design.
+
+#### Principle 1: Consistent Flavor — The Beauty of One-Pattern
+
+Readers pay not for new shocks but for the reliable delivery of "that satisfaction I know" (catharsis, awe, recognition) in every episode.
+
+- **Signature Pattern Definition**: Clearly define the work's recurring reward in Phase 1 (e.g., information gap → overwhelming result → surrounding characters' shock)
+- **Clichés Are About Arrangement**: The question isn't "which clichés to avoid" but "which clichés to arrange in what order"
+- **genre_analysis.md Output**: Must include a `Signature Reward Pattern` section
+
+#### Principle 2: Deficiency Resolution — Designing Vicarious Satisfaction
+
+The common denominator of all web novels is "(deficient) protagonist succeeds and gains recognition." The sense of **efficacy** in that process is the core.
+
+- **Deficiency Setup**: Concretely define the protagonist's initial deficiency (disrespect, betrayal, failure, etc.)
+- **Cheat Mechanism**: The advantage that can overturn the deficiency (regression knowledge, hidden abilities, information gap, etc.)
+- **Reward Stages**: Deficiency → cheat activation → surrounding shock/recognition → new challenge cycle
+- **Relay to Character Writer**: Guide character arc design as a deficiency-reward cycle
+
+#### Principle 3: Anticipation Management — Continuous Push-Pull
+
+What keeps readers hooked is not "this episode's catharsis" but "what will happen next episode?"
+
+- **Constraint (Penalty) Design**: Apply constraints to overwhelming power to maintain tension (identity concealment, time limits, power restrictions, etc.)
+- **Positive Misunderstanding Structure**: Humor and catharsis emerge when the protagonist's intent diverges from others' interpretation
+- **Foreshadowing-Payoff Rhythm**: Small payoffs every episode + medium payoffs every 3-5 episodes + major payoffs per arc
+- **Relay to Pacing Manager**: Guide reward interval (catharsis tempo) and foreshadowing placement timing
+- **Relay to Story Writer**: Guide inclusion of positive misunderstanding/misinterpretation as plot devices
+
 ### Fantasy/Isekai Checklist
 - [ ] Power system defined (magic, skills, stats)
 - [ ] Cheat ability or unique advantage established
@@ -253,8 +284,8 @@ Reader Expectation Fulfillment: [1-10]
 ---
 
 ## Version Information
-- **Version**: 2.0 - Claude Code Optimized
-- **Last Updated**: 2026-02-20
+- **Version**: 2.1 - Web Novel Core Principles Added
+- **Last Updated**: 2026-02-24
 
 **Genre Specialist**
 *"Every genre has its reasons, every trope has its power."*
