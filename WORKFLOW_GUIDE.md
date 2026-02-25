@@ -1,4 +1,4 @@
-# Novel Studio v2.0 - Workflow Guide
+# Novel Studio v2.2 - Workflow Guide
 
 **Multi-Agent Novel Creation System - Claude Code Workflow**
 
@@ -35,7 +35,7 @@ and write a novel about "college students' first love" as project "first_love" i
 When starting the workflow, create the following directory structure:
 
 ```
-projects/<project_name>/
+projects/{language}/<project_name>/
 ├── phase1_planning/
 │   ├── story_structure.md
 │   ├── character_profiles.md
@@ -80,7 +80,7 @@ Analyze the user request to determine:
 4. Core message
 5. Concept summary
 
-Save the result to projects/<project_name>/phase1_planning/concept.md
+Save the result to projects/{language}/<project_name>/phase1_planning/concept.md
 ```
 
 **Output**: `concept.md`
@@ -109,7 +109,7 @@ Read concept.md and construct the plot:
 
 3. Foreshadowing and twist design
 
-Save the result to projects/<project_name>/phase1_planning/story_structure.md
+Save the result to projects/{language}/<project_name>/phase1_planning/story_structure.md
 
 Quality standard: 75/100 or higher
 ```
@@ -141,7 +141,7 @@ Read concept.md and design the characters:
    - Speech patterns
    - Formal/informal language rules
 
-Save the result to projects/<project_name>/phase1_planning/character_profiles.md
+Save the result to projects/{language}/<project_name>/phase1_planning/character_profiles.md
 
 Quality standard: 75/100 or higher
 ```
@@ -169,7 +169,7 @@ Read concept.md and design the setting:
 
 3. World-building rules
 
-Save the result to projects/<project_name>/phase1_planning/setting_world.md
+Save the result to projects/{language}/<project_name>/phase1_planning/setting_world.md
 
 Quality standard: 75/100 or higher
 ```
@@ -202,7 +202,7 @@ Read concept.md and establish genre strategy:
 
 4. Genre-specific quality standards
 
-Save the result to projects/<project_name>/phase1_planning/genre_analysis.md
+Save the result to projects/{language}/<project_name>/phase1_planning/genre_analysis.md
 
 Quality standard: 75/100 or higher
 ```
@@ -228,7 +228,7 @@ Read all four planning documents and create an integrated plan:
 2. Resolve conflicts
 3. Write final planning document
 
-Save the result to projects/<project_name>/phase1_planning/final_plan.md
+Save the result to projects/{language}/<project_name>/phase1_planning/final_plan.md
 ```
 
 **Output**: `final_plan.md`
@@ -261,7 +261,7 @@ Read the integrated plan and design overall pacing:
 
 4. Improvement recommendations
 
-Save the result to projects/<project_name>/phase1_planning/pacing_plan.md
+Save the result to projects/{language}/<project_name>/phase1_planning/pacing_plan.md
 
 Quality standard: 75/100 or higher
 ```
@@ -320,7 +320,7 @@ Read final_plan.md and create a detailed outline for Chapter X:
 2. Foreshadowing/setup
 3. Climax design (for Act 2)
 
-Save the result to projects/<project_name>/phase2_chapters/chapter_0X/outline.md
+Save the result to projects/{language}/<project_name>/phase2_chapters/chapter_0X/outline.md
 ```
 
 **Output**: `chapter_0X/outline.md`
@@ -462,7 +462,7 @@ Integrate written scenes into one chapter:
 3. Length adjustment: target 3000-4000 characters
 4. Verify overall flow
 
-Save the result to projects/<project_name>/phase2_chapters/chapter_0X/draft.md
+Save the result to projects/{language}/<project_name>/phase2_chapters/chapter_0X/draft.md
 
 Quality standard: 75/100 or higher
 ```
@@ -495,7 +495,7 @@ Verify the pacing of the completed chapter:
    - Parts to expand
    - Parts to condense
 
-Save the result to projects/<project_name>/phase2_chapters/chapter_0X/pacing_notes.md
+Save the result to projects/{language}/<project_name>/phase2_chapters/chapter_0X/pacing_notes.md
 ```
 
 **Output**: `chapter_0X/pacing_notes.md`
@@ -517,8 +517,8 @@ Edit draft.md:
 4. Structural issues
 
 Output:
-- projects/<project_name>/phase2_chapters/chapter_0X/editorial_notes.md
-- projects/<project_name>/phase2_chapters/chapter_0X/final.md
+- projects/{language}/<project_name>/phase2_chapters/chapter_0X/editorial_notes.md
+- projects/{language}/<project_name>/phase2_chapters/chapter_0X/final.md
 
 Reflect pacing recommendations in the revision.
 ```
@@ -574,7 +574,7 @@ Integrate all chapters into one complete novel:
 2. Overall consistency
 3. Generate final novel
 
-Save the result to projects/<project_name>/phase3_final/novel.md
+Save the result to projects/{language}/<project_name>/phase3_final/novel.md
 ```
 
 **Output**: `phase3_final/novel.md`
@@ -596,20 +596,20 @@ Final editing of the completed novel:
 4. Final quality score (0-100)
 
 Output:
-- projects/<project_name>/phase3_final/editorial_report.md
-- projects/<project_name>/phase3_final/novel_final.md
+- projects/{language}/<project_name>/phase3_final/editorial_report.md
+- projects/{language}/<project_name>/phase3_final/final_novel.md
 ```
 
 **Output**:
 - `phase3_final/editorial_report.md`
-- `phase3_final/novel_final.md`
+- `phase3_final/final_novel.md`
 
 ---
 
 #### Step 3.3: Reader Perspective Feedback (Feedback Agent)
 
 **Agent**: Feedback Agent (`.github/agents/feedback-agent.agent.md` - [English](/.github/agents/feedback-agent.agent.md#english) | [한국어](/.github/agents/feedback-agent.agent.md#korean))
-**Input**: `phase3_final/novel_final.md`
+**Input**: `phase3_final/final_novel.md`
 
 **Task**:
 ```
@@ -623,7 +623,7 @@ Evaluate the completed novel from 5 perspectives:
 
 Calculate average score.
 
-Save the result to projects/<project_name>/phase3_final/feedback_report.md
+Save the result to projects/{language}/<project_name>/phase3_final/feedback_report.md
 ```
 
 **Output**: `phase3_final/feedback_report.md`
@@ -645,7 +645,7 @@ Save the result to projects/<project_name>/phase3_final/feedback_report.md
    Quality score: 85/100
 
 📁 Generated files:
-   projects/<project_name>/phase3_final/novel_final.md
+   projects/{language}/<project_name>/phase3_final/final_novel.md
 
 승인 요청:
 - 승인(Approve): 다음 단계 진행
@@ -682,7 +682,7 @@ To resume an interrupted project:
 Read WORKFLOW_GUIDE.md,
 and continue project "<project_name>".
 
-1. Read projects/<project_name>/.novel-studio/status.json to check interruption point
+1. Read projects/{language}/<project_name>/.novel-studio/status.json to check interruption point
 2. Resume from the last completed step
 ```
 
@@ -733,7 +733,7 @@ WORKFLOW_GUIDE.md를 읽고,
 워크플로우 시작 시 다음 디렉토리를 생성하세요:
 
 ```
-projects/<프로젝트명>/
+projects/{language}/<프로젝트명>/
 ├── phase1_planning/
 │   ├── story_structure.md
 │   ├── character_profiles.md
@@ -778,7 +778,7 @@ projects/<프로젝트명>/
 4. 핵심 메시지
 5. 콘셉트 요약
 
-결과를 projects/<프로젝트명>/phase1_planning/concept.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/concept.md로 저장.
 ```
 
 **출력**: `concept.md`
@@ -807,7 +807,7 @@ concept.md를 읽고 플롯을 구성하세요:
 
 3. 복선 및 반전 설계
 
-결과를 projects/<프로젝트명>/phase1_planning/story_structure.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/story_structure.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -839,7 +839,7 @@ concept.md를 읽고 캐릭터를 설계하세요:
    - 말투 특징
    - 존댓말/반말 규칙
 
-결과를 projects/<프로젝트명>/phase1_planning/character_profiles.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/character_profiles.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -867,7 +867,7 @@ concept.md를 읽고 배경을 설정하세요:
 
 3. 세계관 규칙
 
-결과를 projects/<프로젝트명>/phase1_planning/setting_world.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/setting_world.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -900,7 +900,7 @@ concept.md를 읽고 장르 전략을 수립하세요:
 
 4. 장르별 품질 기준
 
-결과를 projects/<프로젝트명>/phase1_planning/genre_analysis.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/genre_analysis.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -926,7 +926,7 @@ concept.md를 읽고 장르 전략을 수립하세요:
 2. 충돌 해결
 3. 최종 기획서 작성
 
-결과를 projects/<프로젝트명>/phase1_planning/final_plan.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/final_plan.md로 저장.
 ```
 
 **출력**: `final_plan.md`
@@ -959,7 +959,7 @@ concept.md를 읽고 장르 전략을 수립하세요:
 
 4. 개선 권장사항
 
-결과를 projects/<프로젝트명>/phase1_planning/pacing_plan.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase1_planning/pacing_plan.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -1018,7 +1018,7 @@ final_plan.md를 읽고 Chapter X의 상세 개요를 작성하세요:
 2. 복선/떡밥
 3. 클라이맥스 설계 (2막인 경우)
 
-결과를 projects/<프로젝트명>/phase2_chapters/chapter_0X/outline.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase2_chapters/chapter_0X/outline.md로 저장.
 ```
 
 **출력**: `chapter_0X/outline.md`
@@ -1160,7 +1160,7 @@ final_plan.md를 읽고 Chapter X의 상세 개요를 작성하세요:
 3. 분량 조절: 3000-4000자 목표
 4. 전체 흐름 검증
 
-결과를 projects/<프로젝트명>/phase2_chapters/chapter_0X/draft.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase2_chapters/chapter_0X/draft.md로 저장.
 
 품질 기준: 75/100 이상
 ```
@@ -1193,7 +1193,7 @@ final_plan.md를 읽고 Chapter X의 상세 개요를 작성하세요:
    - 늘려야 할 부분
    - 축약해야 할 부분
 
-결과를 projects/<프로젝트명>/phase2_chapters/chapter_0X/pacing_notes.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase2_chapters/chapter_0X/pacing_notes.md로 저장.
 ```
 
 **출력**: `chapter_0X/pacing_notes.md`
@@ -1215,8 +1215,8 @@ draft.md를 교정하세요:
 4. 구조적 문제
 
 결과:
-- projects/<프로젝트명>/phase2_chapters/chapter_0X/editorial_notes.md
-- projects/<프로젝트명>/phase2_chapters/chapter_0X/final.md
+- projects/{language}/<프로젝트명>/phase2_chapters/chapter_0X/editorial_notes.md
+- projects/{language}/<프로젝트명>/phase2_chapters/chapter_0X/final.md
 
 페이싱 권장사항을 반영하여 수정.
 ```
@@ -1272,7 +1272,7 @@ Chapter X 완료!
 2. 전체 일관성
 3. 최종 소설 생성
 
-결과를 projects/<프로젝트명>/phase3_final/novel.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase3_final/novel.md로 저장.
 ```
 
 **출력**: `phase3_final/novel.md`
@@ -1294,20 +1294,20 @@ Chapter X 완료!
 4. 최종 품질 점수 (0-100)
 
 결과:
-- projects/<프로젝트명>/phase3_final/editorial_report.md
-- projects/<프로젝트명>/phase3_final/novel_final.md
+- projects/{language}/<프로젝트명>/phase3_final/editorial_report.md
+- projects/{language}/<프로젝트명>/phase3_final/final_novel.md
 ```
 
 **출력**:
 - `phase3_final/editorial_report.md`
-- `phase3_final/novel_final.md`
+- `phase3_final/final_novel.md`
 
 ---
 
 #### Step 3.3: 독자 관점 피드백 (Feedback Agent)
 
 **에이전트**: Feedback Agent (`.github/agents/feedback-agent.agent.md` - [English](/.github/agents/feedback-agent.agent.md#english) | [한국어](/.github/agents/feedback-agent.agent.md#korean))
-**입력**: `phase3_final/novel_final.md`
+**입력**: `phase3_final/final_novel.md`
 
 **작업**:
 ```
@@ -1321,7 +1321,7 @@ Chapter X 완료!
 
 평균 점수 산출.
 
-결과를 projects/<프로젝트명>/phase3_final/feedback_report.md로 저장.
+결과를 projects/{language}/<프로젝트명>/phase3_final/feedback_report.md로 저장.
 ```
 
 **출력**: `feedback_report.md`
@@ -1343,7 +1343,7 @@ Chapter X 완료!
    품질 점수: 85/100
 
 📁 생성된 파일:
-   projects/<프로젝트명>/phase3_final/novel_final.md
+   projects/{language}/<프로젝트명>/phase3_final/final_novel.md
 
 승인 요청:
 - 승인(Approve): 다음 단계 진행
@@ -1380,7 +1380,7 @@ Chapter X 완료!
 WORKFLOW_GUIDE.md를 읽고,
 "<프로젝트명>" 프로젝트를 이어서 써줘.
 
-1. projects/<프로젝트명>/.novel-studio/status.json 읽어서 중단 시점 확인
+1. projects/{language}/<프로젝트명>/.novel-studio/status.json 읽어서 중단 시점 확인
 2. 마지막 완료된 단계 이후부터 재개
 ```
 
@@ -1402,6 +1402,6 @@ review 모드로 작성해줘.
 
 ---
 
-**Document Version**: v2.0-bilingual
+**Document Version**: v2.2-bilingual
 **Last Updated**: 2026-02-20
 **Authors**: Novel Studio for Claude Code — [tiny_flowlab](https://github.com/tiny-flowlab)

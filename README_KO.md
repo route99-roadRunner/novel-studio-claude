@@ -136,7 +136,7 @@ Phase 3: 완성 [서브에이전트 스폰]
 
 ```
 novel-studio-claude/
-├── CLAUDE.md                          ← 시스템 설정 (자동 로드, ~58줄)
+├── CLAUDE.md                          ← 시스템 설정 (자동 로드, ~24줄)
 ├── .github/agents/                    ← 14개 전문 에이전트 (+ 14개 한국어 버전)
 │   ├── main-writer.agent.md
 │   ├── story-writer.agent.md
@@ -175,7 +175,7 @@ projects/{language}/{project_name}/
 
 | 컴포넌트 | 전략 |
 |---------|------|
-| `CLAUDE.md` (매 대화 자동 로드) | ~58줄로 축소 — 필수 규칙만 |
+| `CLAUDE.md` (매 대화 자동 로드) | ~24줄로 축소 — 필수 규칙만 |
 | `orchestration.md` | 에이전트 레지스트리 + Phase 흐름 — Main Writer 필요 시만 로드 |
 | `examples/` (3개 파일) | 출력 형식 예시 — 집필 시만 로드 |
 | 에이전트 `.md` 파일 | 각 에이전트가 자기 완결적 지시를 포함 |

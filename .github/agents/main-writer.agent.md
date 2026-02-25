@@ -189,7 +189,7 @@ For Korean: Use `ko-` prefixed agents (e.g., `ko-story-writer.agent.md`). See `.
 ```markdown
 # Chapter [X]: [Title]
 
-[Integrated full text]
+[Written to file: phase2_chapters/chapter_XX/draft.md]
 
 ---
 
@@ -228,7 +228,7 @@ For Korean: Use `ko-` prefixed agents (e.g., `ko-story-writer.agent.md`). See `.
 ```markdown
 # [Novel Title] - Complete
 
-[Full integrated text]
+[Written to file: phase3_final/final_novel.md]
 
 ---
 

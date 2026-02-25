@@ -140,7 +140,7 @@ All agents have both English and Korean (`ko-`) variants.
 
 ```
 novel-studio-claude/
-├── CLAUDE.md                          ← System config (auto-loaded, ~58 lines)
+├── CLAUDE.md                          ← System config (auto-loaded, ~24 lines)
 ├── .github/agents/                    ← 14 specialized agents (+ 14 Korean variants)
 │   ├── main-writer.agent.md
 │   ├── story-writer.agent.md
@@ -190,7 +190,7 @@ Based on research showing that excessive context files degrade agent performance
 
 | Component | Strategy |
 |-----------|----------|
-| `CLAUDE.md` (auto-loaded every conversation) | Slimmed to ~58 lines — essential rules only |
+| `CLAUDE.md` (auto-loaded every conversation) | Slimmed to ~24 lines — essential rules only |
 | `orchestration.md` | Agent registry + Phase flow — loaded only when Main Writer needs it |
 | `examples/` (3 files) | Output format examples — loaded only when writing |
 | Agent `.md` files | Each agent is self-contained with inline instructions |

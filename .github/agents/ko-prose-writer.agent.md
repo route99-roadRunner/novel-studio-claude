@@ -74,18 +74,12 @@
    - 클라이맥스: 문장 길이 변화
 
 **출력 형식**:
+
+**(파일)** `phase2_chapters/chapter_XX/draft.md`에 본문 전문 저장 (Write 도구 사용)
+
+**(대화)**
 ```markdown
-# Chapter [N]: [제목]
-
-[본문 - 자연스러운 문학 작품]
-
-[장면 전환은 *** 또는 공백으로]
-
-***
-
-[다음 장면]
-
----
+[Written to file: phase2_chapters/chapter_XX/draft.md]
 
 **작성 노트** (Prose Writer 내부용):
 - 목표 분량: [2,500자] / 실제: [2,480자]
@@ -371,7 +365,7 @@
 - 이전 챕터 (문체 일관성 유지)
 
 ### 쓰기 권한
-- `chapter_XX.md` (초고)
+- `chapter_XX/draft.md` (초고)
 - 작성 노트 (내부 메모)
 
 ### 협업

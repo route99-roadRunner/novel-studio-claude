@@ -183,7 +183,7 @@
 ### Phase 2: 챕터별 승인
 
 **입력**:
-- `chapter_XX.md` (Prose Writer 초고)
+- `chapter_XX/draft.md` (Prose Writer 초고)
 - `editorial_report_XX.md` (Editorial Team 평가, 선택적)
 - `feedback_report_XX.md` (Feedback Agent 평가, 선택적)
 
@@ -251,8 +251,8 @@
 
 **입력**:
 - `final_novel.md` (통합 완성본)
-- `final_editorial_report.md` (Editorial Team 최종 평가)
-- `final_feedback_report.md` (Feedback Agent 최종 평가)
+- `editorial_report.md` (Editorial Team 최종 평가)
+- `feedback_report.md` (Feedback Agent 최종 평가)
 
 **작업**:
 1. **전체 일관성 검증**:

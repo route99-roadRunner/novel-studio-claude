@@ -112,3 +112,40 @@ Step 2 — 수정 실행: Edit 도구로 부분 교체, 전문 재출력 금지
 Step 3 — 파급 확인: 후속 화차 영향 확인, 설정 파일 동기화, revision-notes 기록
 Step 4 — 보고: "X장의 Y 부분을 Z로 수정 완료" 형태로 간결 보고
 ```
+
+## 프로젝트 구조
+
+> 새 프로젝트 생성 시 아래 디렉토리 구조를 따른다.
+
+```
+projects/{language}/{project_name}/
+  phase1_planning/     # 기획 산출물
+  phase2_chapters/     # 챕터별 원고
+  phase3_final/        # 최종 완성본
+  notes/
+    session-log.md     # 세션별 작업 기록 (컴팩션 복원용)
+    revision-notes.md  # 수정 이력
+  .novel-studio/
+    status.json        # 프로젝트 상태
+    checkpoints/       # 체크포인트 백업
+    backups/           # 원고 백업
+```
+
+## 컨텍스트 관리 및 컴팩션
+
+**선제적 관리**: 완료 결과는 즉시 파일 저장, session-log.md에 진행 상황 기록.
+
+**컴팩션 복원 절차**:
+1. `notes/session-log.md` 읽기 → 마지막 작업 상태 파악
+2. 해당 챕터 원고 파일 읽기 → 현재 원고 확인
+3. `notes/revision-notes.md` 읽기 → 미완료 수정 사항 확인
+4. 사용자에게 상태 보고 후 작업 재개
+
+**세션 로그 형식**: `## 세션: YYYY-MM-DD` → 작업 내용 / 미완료 사항 / 다음 세션 이어갈 것
+
+## 시작하기
+
+```
+"소설을 써줘" 또는 "Write me a novel"로 시작하세요.
+장르, 아이디어, 분량 등을 알려주시면 최적의 전략을 수립합니다.
+```

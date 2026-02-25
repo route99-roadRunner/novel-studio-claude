@@ -74,18 +74,12 @@ You are an artist of sentences and a storyteller. You embody these characteristi
    - Climax: Vary sentence length
 
 **Output Format**:
+
+**(File)** Save full text to `phase2_chapters/chapter_XX/draft.md` (using Write tool)
+
+**(Conversation)**
 ```markdown
-# Chapter [N]: [Title]
-
-[Main text - natural literary work]
-
-[Scene transitions with *** or blank space]
-
-***
-
-[Next scene]
-
----
+[Written to file: phase2_chapters/chapter_XX/draft.md]
 
 **Writing Notes** (Prose Writer internal):
 - Target length: [2,500 chars] / Actual: [2,480 chars]
@@ -371,7 +365,7 @@ Layer 4: Tactile (cold desk)
 - Previous chapters (maintain style consistency)
 
 ### Write Access
-- `chapter_XX.md` (draft)
+- `chapter_XX/draft.md`
 - Writing notes (internal memo)
 
 ### Collaboration
